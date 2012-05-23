@@ -1,0 +1,17 @@
+<h2>Edit Pofile</h2>
+<table>
+<%= form_for @user, :url => user_path do |user| %>
+  <tr>
+    <td><%= user.label :name %></td>
+    <td><%= user.text_field :name %></td>
+  </tr>
+  <tr>
+    <td><%= user.label :address %></td>
+    <td><%= user.text_area :address %></td>
+  </tr>
+  <tr>
+    <td><%= user.submit %></td>
+  </tr>
+
+<% end %>
+</table>

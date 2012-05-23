@@ -1,0 +1,29 @@
+<h2> Sign Up </h2>
+<% flash[:error] %>
+<% flash[:notice] %>
+<%= form_for @user do |user| %>
+  <%if @user.errors.any? %>
+    <div class=error_messages>
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <%  end %>
+  <p>
+    <%= user.label :email %><br />
+    <%= user.text_field :email %>
+  </p>
+  <p>
+    <%= user.label :password %><br />
+    <%= user.password_field :password %>
+  </p>
+  <p>
+    <%= user.label :password_confirmation %><br />
+    <%= user.password_field :password_confirmation%>
+  </p>
+  <p><%= recaptcha_tags %></p>
+  <p class="button"><%= user.submit %></p>
+<% end %>

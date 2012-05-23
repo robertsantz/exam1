@@ -18,13 +18,7 @@
       </ul>
     </div>
     <br class=clear />
-    <div id=menu_login>
-      <% unless current_user %>
-        <%= render :partial => "/layouts/login" %>
-      <% else %>
-        <%= render :partial => "/layouts/after_login" %>
-      <% end %>
-    </div>
+
     <div id=content><%= yield %>
     </div>
   </div>
