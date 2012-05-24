@@ -1,0 +1,37 @@
+<h2>User Profile</h2>
+<table class=show_profile>
+  <tr>
+    <td>Email </td>
+    <td><%= @user.email %></td>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td><%= @user.name %></td>
+  </tr>
+  <tr>
+    <td>Address</td>
+    <td><%= @user.address %></td>
+  </tr>
+  <tr>
+    <td>Birthday</td>
+    <td><%= @user.birthday %></td>
+  </tr>
+  <tr>
+    <td>Gender</td>
+    <td>
+      <% if @user.gender == false %>
+        Female
+      <% else %>
+        Male
+      <% end %>
+    </td>
+  </tr>
+  <tr>
+    <td>Facebook</td>
+    <td><%= @user.facebook %></td>
+  </tr>
+  <tr>
+    <td>Blog</td>
+    <td><%= @user.blog %></td>
+  </tr>
+</table>

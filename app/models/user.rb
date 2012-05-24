@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   attr_accessor :password
+  has_many :products
   before_save :encrypt_password
   validates :password, :presence => {:on => :create},
                        :confirmation => true
@@ -18,5 +19,9 @@ class User < ActiveRecord::Base
     else
       nil
     end
+  end
+  
+  def is_admin?
+    self.email == "admin@admin.com"
   end
 end

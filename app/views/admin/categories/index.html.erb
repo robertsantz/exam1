@@ -1,3 +1,17 @@
-<div class=category_header>
-  Listing Product
-</div>
+
+<p class=header>Listing Product</p>
+<%= link_to "New Category", new_admin_category_path %>
+
+<table>
+    <tr class=category_index_table_title>
+      <td>Name</td>
+      <td>Parent Category</td>
+      <td></td>
+    </tr>
+  <% @categories.each do |category| %>
+    <tr>
+      <td><%= category.name %></td>
+      <td><%= category.parent_category %></td>
+    </tr>
+  <% end %>
+</table>

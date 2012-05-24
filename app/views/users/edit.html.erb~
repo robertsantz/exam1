@@ -7,10 +7,34 @@
   </tr>
   <tr>
     <td><%= user.label :address %></td>
-    <td><%= user.text_area :address %></td>
+    <td><%= user.text_area :address, :rows => 4 %></td>
   </tr>
   <tr>
-    <td><%= article.submit %></td>
+    <td><%= user.label :phone_number %></td>
+    <td><%= user.text_field :phone_number %></td>
+  </tr>
+  <tr>
+    <td><%= user.label :birthday %></td>
+    <td><%= user.date_select(:birthday, :start_year => 1940) %></td>
+  </tr>
+  <tr>
+    <td><%= user.label (:gender) %></td>
+    <td><%= user.radio_button(:gender, 0, :checked => (:gender == false)? true:false) %>
+        <%= label_tag ("Female") %>
+        <%= user.radio_button(:gender, 1, :checked => (:gender == true)? true:false) %>
+        <%= label_tag ("Male") %>
+    </td>
+  </tr>
+  <tr>
+    <td><%= user.label :facebook %></td>
+    <td><%= user.text_field :facebook %></td>
+  </tr>
+  <tr>
+    <td><%= user.label :blog %></td>
+    <td><%= user.text_field :blog %></td>
+  </tr>
+  <tr>
+    <td><%= user.submit %></td>
   </tr>
 
 <% end %>

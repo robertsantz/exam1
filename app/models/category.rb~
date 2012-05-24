@@ -1,6 +1,5 @@
 class Category < ActiveRecord::Base
   validates :name, :presence => true, :length => {:minimum => 1, :maximum => 200}
-  has_many :products
 
   def parent_category
     if self.parent_id 
