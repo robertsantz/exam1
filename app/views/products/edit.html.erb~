@@ -34,5 +34,5 @@
   </tr>
 </table>
 <%= product.hidden_field :user_id, :value => current_user.id  %>
-<%= product.submit "Add Product" %>
+<%= product.submit "Update Product" %>
 <% end %>

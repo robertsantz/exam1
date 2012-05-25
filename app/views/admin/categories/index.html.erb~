@@ -1,7 +1,7 @@
-<div class=header>
-<p>Listing Product</p>
+
+<p class=header>Listing Product</p>
 <%= link_to "New Category", new_admin_category_path %>
-</div>
+
 <table>
     <tr class=category_index_table_title>
       <td>Name</td>

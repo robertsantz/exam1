@@ -100,7 +100,7 @@
   padding: 10px 0;
 }
 
-#content .category_header p:first-child{
+#content .header{
   border-bottom: 5px solid black;
   border-top:5px solid black;
   font-size:2em;
@@ -110,4 +110,19 @@
 #content .category_index_table_title td{
   font-size: 1.4em;
   width:30%;
+}
+
+#content .product{
+  width:33%;
+  padding:0;
+  margin:0;
+  float:left;
+  border:1px black solid;
+  height:100px;
+  overflow-x:scroll;
+
+}
+
+#content .product a{
+  text-decoration:none;
 }

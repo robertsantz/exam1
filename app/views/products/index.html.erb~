@@ -1,5 +1,5 @@
 <p class=header>Listing Products</p>
-<div><%= flash[:notice] %></div>
+<%= flash[:notice] %>
 <% @products.each do |product| %>
 <div class=product>
   <table>

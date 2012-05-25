@@ -1,0 +1,28 @@
+<p class=header>Product Details</p>
+<table>
+  <tr>
+    <td>Name</td>
+    <td>: <%= @product.name %></td>
+  </tr>
+  <tr>
+    <td>Description</td>
+    <td>: <%= @product.description %></td>
+  </tr>
+  <tr>
+    <td>Price</td>
+    <td>: <%= @product.price %></td>
+  </tr>
+  <tr>
+    <td>Weight</td>
+    <td>: <%= @product.weight %></td>
+  </tr>
+  <tr>
+    <td>Category</td>
+    <td>: <%= @category %></td>
+  </tr>
+  <tr>
+    <td>Published By</td>
+    <td>: <%= @product.user.name %></td>
+  </tr>
+</table>
+<%= link_to 'Back', products_path %>

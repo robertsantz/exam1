@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   attr_accessor :password
   has_many :products
+  has_many :articles
   before_save :encrypt_password
   validates :password, :presence => {:on => :create},
                        :confirmation => true

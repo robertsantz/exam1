@@ -12,13 +12,19 @@
       <h1>Welcome to my store</h1>
       <ul>
         <li>Home</li>
-        <li>Products</li>
-        <li>Articles</li>
+        <li><%= link_to 'Products', products_path %></li>
+        <li><%= link_to 'Articles', articles_path%></li>
         <li><%= link_to 'Category', admin_categories_path %></li>
       </ul>
     </div>
     <br class=clear />
-
+    <div id=menu_login>
+      <% unless current_user %>
+        <%= render :partial => "/layouts/login" %>
+      <% else %>
+        <%= render :partial => "/layouts/after_login" %>
+      <% end %>
+    </div>
     <div id=content><%= yield %>
     </div>
   </div>

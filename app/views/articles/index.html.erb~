@@ -1,0 +1,3 @@
+<p class=header>Listing Article</p>
+<%= flash[:notice] %>
+<%= link_to "Create a New Article", new_article_path %>

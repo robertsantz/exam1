@@ -1,7 +1,7 @@
 <div class=after_login>
   <ul>
     <li><%= link_to "Edit Profile", edit_user_path(current_user.id) %></li>
-    <li><%= link_to "Sell a Product" %></li>
+    <li><%= link_to "Sell a Product", new_product_path %></li>
     <li><%= link_to "Share an Article" %></li>
     <li><%= link_to "Logout", log_out_path %></li>
   </ul>

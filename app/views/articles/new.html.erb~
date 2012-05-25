@@ -1,0 +1,25 @@
+<p class=header>New Article</p>
+<%= form_for @article do |article|%>
+  <% if @article.errors.any? %>
+    <div class=error_messages>
+      <h2>Invalid In Creating Article</h2>
+      <ul>
+        <% for message in @article.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <table>
+    <tr>
+      <td><%= article.label :title %></td>
+      <td><%= article.text_field :title %></td>
+    </tr>
+    <tr>
+      <td><%= article.label :body %></td>
+      <td><%= article.text_area :body, :rows => 4 %></td>
+    </tr>
+  </table>
+  <% article.hidden_field :user_id, :value => current_user.id %>
+  <%= article.submit "List Article" %>
+<% end %>

@@ -5,9 +5,11 @@ Exam1::Application.routes.draw do
   resources :users
   resources :sessions
   resources :products
+  resources :articles
   get "sign_up" => "users#new", :as => "sign_up"
   get "log_in" => "sessions#new", :as => "log_in"
   get "log_out" => "sessions#destroy", :as => "log_out"
+  #get "delete_product" => "products#destroy", :as => "delete_product"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
