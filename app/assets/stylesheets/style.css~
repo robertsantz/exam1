@@ -119,10 +119,40 @@
   float:left;
   border:1px black solid;
   height:100px;
-  overflow-x:scroll;
+  overflow-y:scroll;
 
 }
 
 #content .product a{
+  text-decoration:none;
+}
+
+#content .article h3, p{
+  margin:0px
+}
+
+#content .article{
+  border-bottom:solid 1px black;
+}
+
+#content .article a{
+  text-decoration:none;
+}
+
+#content .create_new_article{
+  text-decoration:none;
+  padding-bottom:20px;
+  display:block;
+}
+
+#content .show_article h2{
+  font-size:1.5em;
+}
+
+#content .show_article p{
+  text-align:justify;
+}
+
+#content .show_article a{
   text-decoration:none;
 }

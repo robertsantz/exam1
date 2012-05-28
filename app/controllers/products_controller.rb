@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
 
   def index
     @categories = (Category.all-Category.where(["parent_id IS NULL"])).map{|x|[x.name, x.id]}
-    @products = Product.all
+    @products = Product.all#limit(5)
 
   end
 

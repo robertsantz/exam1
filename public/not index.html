@@ -11,16 +11,10 @@
     <div id=header>
       <h1>Welcome to my store</h1>
       <ul>
-        <% if current_user.nil? %>
-          <li><%= link_to 'Sign Up', new_user_path %>
-        <% else %>
-          <li><%= link_to 'Home', root_url %></li>
-        <% end %>
+        <li>Home</li>
         <li><%= link_to 'Products', products_path %></li>
         <li><%= link_to 'Articles', articles_path %></li>
-        <% unless current_user.nil? %>
-          <li><%= link_to 'Category', admin_categories_path %></li>
-        <% end %>
+        <li><%= link_to 'Category', admin_categories_path %></li>
       </ul>
     </div>
     <br class=clear />

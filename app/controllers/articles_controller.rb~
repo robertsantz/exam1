@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
 
   def index
+    @articles = Article.all
   end
   
   def new
@@ -11,7 +12,9 @@ class ArticlesController < ApplicationController
     @article = Article.new(params[:article])
     if @article.save
       flash[:notice] = "Article successfully saved"
+      redirect_to articles_path
     else
+      render 'new'
     end
   end
 

@@ -1,7 +1,6 @@
 <p class=header>Listing Article</p>
 <div><%= flash[:notice] %></div>
-<%= link_to "Create a New Article", new_article_path, :class => "create_new_article" %>
-<% @articles.each do |article| %>
+<% .each do |article| %>
   <div class=article>
     <p><%= truncate(article.body, :length =>20, :omission => '...') %></p>
     <br />

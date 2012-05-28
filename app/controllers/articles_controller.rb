@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
 
   def index
+    @articles = Article.all
   end
   
   def new
@@ -18,6 +19,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @article = Article.find_by_id(params[:id])
   end
  
   def edit

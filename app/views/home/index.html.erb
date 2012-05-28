@@ -1,5 +1,5 @@
 <p class=header>Listing Products</p>
-<h4><%= flash[:notice] %></h4>
+<div><%= flash[:notice] %></div>
 <% @products.each do |product| %>
 <div class=product>
   <table>
@@ -24,4 +24,13 @@
     </tr>
   </table>
 </div>
+<% end %>
+<p class=header>Listing Article</p>
+<div><%= flash[:notice] %></div>
+<% @articles.each do |article| %>
+  <div class=article>
+    <p><%= truncate(article.body, :length =>20, :omission => '...') %></p>
+    <br />
+    <%= link_to "See Details", article_path(article.id) %>
+  </div>
 <% end %>
