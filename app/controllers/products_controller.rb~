@@ -46,7 +46,4 @@ class ProductsController < ApplicationController
     redirect_to products_path, :notice => "Product Successfully Deleted"
   end
 
-  def home
-  end
-
 end

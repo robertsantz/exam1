@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_filter :require_login, :only => [:new, :edit, :destroy]
 
   def index
     @categories = (Category.all-Category.where(["parent_id IS NULL"])).map{|x|[x.name, x.id]}

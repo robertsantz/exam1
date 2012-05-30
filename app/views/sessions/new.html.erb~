@@ -1,5 +1,5 @@
-<%= flash[:notice] %>
 <p class=header>Log In</h2>
+<%= flash[:notice] %>
 <%= form_tag sessions_path do %>
   <p>
     <%= label_tag :email %><br />
